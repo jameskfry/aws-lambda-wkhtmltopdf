@@ -3,7 +3,7 @@ var MemoryStream = require('memorystream');
 
 process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'];
 
-exports.handler = function(event, context, callback) {
+module.exports.handler = function(event, context, callback) {
     var body = JSON.parse(event.body);
 	var memStream = new MemoryStream();
     var content;
